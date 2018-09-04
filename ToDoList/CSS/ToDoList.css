@@ -42,6 +42,10 @@ h1, h3 {
     border: 1px solid grey;
 }
 
+#todolist li:hover {
+	background: #d9d9d9;
+}
+
 .close {
     position: absolute;
     right: 0;
