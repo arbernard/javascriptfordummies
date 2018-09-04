@@ -3,7 +3,7 @@ function addNewElement() {
 	// Récupération de la liste
 	var parentList = document.getElementById("todolist");
 
-	// Nouvelle élément d eliste
+	// Nouvel élément de liste
 	var myEntry = document.getElementById("newEntry").value;	//récupération de l'entrée de l'utilisateur
 	var myText = document.createTextNode(myEntry);	//on range l'entrée de l'utilisateur dans un texte
 	var myTask = document.createElement("li");	//création d'un nouvel élément de liste
@@ -26,4 +26,12 @@ function addNewElement() {
 		// this.parentNode.outerHTML = "";
 		this.parentNode.remove();
 	}	
+}
+
+//permet de supprimer tous les éléments de la liste
+function removeEveryElement(){
+	var myArray = Array.from(document.getElementsByTagName("li"));	//on caste le document.getElementsByTagName("li") en array pour pouvoir utiliser le forEach
+	myArray.forEach(function(task) {
+		task.remove();	//on retire chaque tache de la liste
+	});
 }
