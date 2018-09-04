@@ -49,3 +49,13 @@ function searchAnElement(){
         }
 	});
 }
+
+// Detecter la pression sur enter sur le bouton add
+var input = document.getElementById("newEntry");
+
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("addButton").click();
+    }
+});
