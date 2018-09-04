@@ -35,3 +35,17 @@ function removeEveryElement(){
 		task.remove();	//on retire chaque tache de la liste
 	});
 }
+
+//permet de rechercher un ou des éléments de la liste
+function searchAnElement(){
+	var myEntry = document.getElementById("searchEntry").value.toUpperCase();	//récupération de l'entrée de l'utilisateur en majuscule
+	var myArray = Array.from(document.getElementsByTagName("li"));	//on caste le document.getElementsByTagName("li") en array pour pouvoir utiliser le forEach
+	
+	myArray.forEach(function(task) {	// Loop through all list items, and hide those who don't match the search query
+		if (task.innerHTML.toUpperCase().indexOf(myEntry) > -1) {
+            task.style.display = "";
+        } else {
+            task.style.display = "none";
+        }
+	});
+}
