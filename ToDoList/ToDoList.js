@@ -42,7 +42,7 @@ function searchAnElement(){
 	var myArray = Array.from(document.getElementsByTagName("li"));	//on caste le document.getElementsByTagName("li") en array pour pouvoir utiliser le forEach
 	
 	myArray.forEach(function(task) {	// Loop through all list items, and hide those who don't match the search query
-		if (task.innerHTML.toUpperCase().indexOf(myEntry) > -1) {
+		if (task.innerText.toUpperCase().indexOf(myEntry) > -1) {
             task.style.display = "";
         } else {
             task.style.display = "none";
